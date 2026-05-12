@@ -68,3 +68,69 @@ input:focus {
 .login-form button:hover {
     background-color: #f0f0f0;
 }
+
+/* Media Queries para Mobile */
+@media (max-width: 1024px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    .login-container {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    label {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+        height: auto;
+        min-height: 45px;
+        padding: 12px 12px;
+    }
+
+    .login-form button {
+        width: 100%;
+        margin-top: 20px;
+        padding: 12px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 320px;
+        padding: 25px 15px;
+    }
+
+    .login-form h2 {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 13px;
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+        min-height: 40px;
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+
+    .login-form button {
+        width: 100%;
+        margin-top: 15px;
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}

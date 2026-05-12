@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="../js/global.js"></script>
+    <script src="../js/cadastro.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <img src="../assets/logo.png" alt="Logo" width="150px" style="cursor: pointer;"
+            onclick="window.location.href = 'home.html';">
+        <h1>SWISH ECOMMERCE</h1>
+        <div style=" display: flex; justify-content: center; align-items: center;">
+            <p id="auth-status">Usuário não autenticado</p>
+            <img src="../assets/profile_pic.png" alt="Perfil" width="25px" style="cursor: pointer;"
+                onclick="window.location.href = 'cadastro.html';">
+        </div>
+    </header>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li>
+                <a href="#">Produtos</a>
+                <ul class="submenu">
+                    <li>Todos os Produtos</li>
+                    <li>Eletrônicos</li>
+                    <li>Moda</li>
+                    <li>Casa</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="cadastro-container">
+            <div class="cadastro-form">
+                <h2>Cadastro de Usuário</h2>
+                
+                <!-- Seletor de tema (default/custom) -->
+                <div class="theme-selector">
+                    <label for="themeSelect">Tema:</label>
+                    <select id="themeSelect" name="theme">
+                        <option value="default">Default</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                </div>
+
+                <form onsubmit="return onCadastroSubmit(event)">
+                    <!-- Campo 1: Texto -->
+                    <label for="nomeInput">Nome Completo:</label>
+                    <input type="text" id="nomeInput" name="nome" placeholder="Digite seu nome completo" required>
+
+                    <!-- Campo 2: Email -->
+                    <label for="emailInput">Email:</label>
+                    <input type="email" id="emailInput" name="email" placeholder="Digite seu email" required>
+
+                    <!-- Campo 3: Data (Datepicker) -->
+                    <label for="dataNascimentoInput">Data de Nascimento:</label>
+                    <input type="date" id="dataNascimentoInput" name="dataNascimento" required>
+
+                    <!-- Campo 4: Radiogroup (Gênero) -->
+                    <label>Gênero:</label>
+                    <div class="radio-group">
+                        <div>
+                            <input type="radio" id="masculino" name="genero" value="masculino" required>
+                            <label for="masculino" class="radio-label">Masculino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="feminino" name="genero" value="feminino">
+                            <label for="feminino" class="radio-label">Feminino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="outro" name="genero" value="outro">
+                            <label for="outro" class="radio-label">Outro</label>
+                        </div>
+                    </div>
+
+                    <!-- Campo 5: Checkbox (Interesses) -->
+                    <label>Interesses:</label>
+                    <div class="checkbox-group">
+                        <div>
+                            <input type="checkbox" id="magica" name="interesses" value="magica">
+                            <label for="magica" class="checkbox-label">Mágica</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="cardistry" name="interesses" value="cardistry">
+                            <label for="cardistry" class="checkbox-label">Cardistry</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="colecao" name="interesses" value="colecao">
+                            <label for="colecao" class="checkbox-label">Coleção</label>
+                        </div>
+                    </div>
+
+                    <!-- Campo 6: Seletor (País) -->
+                    <label for="paisSelect">País:</label>
+                    <select id="paisSelect" name="pais" required>
+                        <option value="">Selecione um país</option>
+                        <option value="brasil">Brasil</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="estados-unidos">Estados Unidos</option>
+                        <option value="canada">Canadá</option>
+                        <option value="portugal">Portugal</option>
+                        <option value="espanha">Espanha</option>
+                    </select>
+
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Autor: Vinícius Bornhofen</p>
+    </footer>
+</body>
+
+</html>

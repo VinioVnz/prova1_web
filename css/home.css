@@ -15,6 +15,60 @@ img {
     transition: transform 0.3s ease-in-out;
 }
 
+.container img {
+    width: 600px;
+    height: auto;
+}
+
 img:hover {
     transform: scale(1.05);
+}
+
+/* Media Queries para Tablet */
+@media (max-width: 1024px) {
+    .container {
+        padding: 40px 30px;
+    }
+
+    .text {
+        width: 45%;
+    }
+
+    .container img {
+        width: 500px;
+    }
+}
+
+/* Media Queries para Mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 30px 15px;
+        gap: 25px;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .container img {
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 10px;
+        gap: 20px;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .container img {
+        width: 100%;
+        max-width: 350px;
+    }
 }

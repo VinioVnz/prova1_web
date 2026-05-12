@@ -11,10 +11,8 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    display: flex;
     align-items: center;
-    position: relative;
 }
 
 .header div {
@@ -129,4 +127,150 @@ li:hover>.submenu {
 .footer p {
     display: inline-block;
     margin: 0;
+}
+
+/* Media Queries para Tablet */
+@media (max-width: 1024px) {
+    .header {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+        grid-column: auto;
+        flex-basis: 100%;
+        order: 2;
+    }
+
+    .header div {
+        grid-column: auto;
+        flex-basis: auto;
+    }
+
+    .header p {
+        grid-column: auto;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    li {
+        padding: 12px 15px;
+    }
+}
+
+/* Media Queries para Mobile */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .header img[alt="Logo"] {
+        width: 100px !important;
+    }
+
+    .header h1 {
+        font-size: 20px;
+        margin: 5px 0;
+    }
+
+    .header p {
+        font-size: 12px;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .header img[alt="Perfil"] {
+        width: 18px !important;
+    }
+
+    .nav-bar {
+        top: auto;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    ul {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    li {
+        padding: 10px 12px;
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    .submenu {
+        position: relative;
+        top: auto;
+        min-width: auto;
+        background-color: #2e2e2e;
+        display: none;
+    }
+
+    li:hover > .submenu {
+        display: none;
+    }
+
+    li:active > .submenu {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .header p {
+        font-size: 11px;
+    }
+
+    li {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 12px;
+    }
 }
