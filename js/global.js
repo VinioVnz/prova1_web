@@ -1,3 +1,7 @@
+function isLoggedIn() {
+    return localStorage.getItem("userInfos") !== null;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const footer = document.querySelector('.footer');
   const isLoginPage = window.location.pathname.includes('login.html');
@@ -11,5 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
         footer.classList.remove('visible');
       }
     });
+  }
+
+  const authStatus = document.getElementById('auth-status');
+  if (authStatus) {
+    if (isLoggedIn()) {
+      const userInfos = JSON.parse(localStorage.getItem("userInfos"));
+      authStatus.textContent = userInfos.login;
+    } else {
+      authStatus.textContent = 'Usuário não autenticado';
+    }
   }
 });
