@@ -1,66 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/global.css" />
     <script src="../js/global.js"></script>
     <script src="../js/login.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <img src="../assets/logo.png" alt="Logo" width="150px" style="cursor: pointer;"
-            onclick="window.location.href = 'home.html';">
-        <h1>SWISH ECOMMERCE</h1>
-        <div style=" display: flex; justify-content: center; align-items: center;">
-            <p id="auth-status">Usuário não autenticado</p>
-            <img src="../assets/profile_pic.png" alt="Perfil" width="25px" style="cursor: pointer;"
-                onclick="window.location.href = 'cadastro.html';">
-        </div>
+      <img
+        src="../assets/logo.png"
+        alt="Logo"
+        width="150px"
+        style="cursor: pointer"
+        onclick="window.location.href = 'home.html'"
+      />
+      <h1>SWISH ECOMMERCE</h1>
+      <div style="display: flex; justify-content: center; align-items: center">
+        <p id="auth-status">Usuário não autenticado</p>
+        <img
+          src="../assets/profile_pic.png"
+          alt="Perfil"
+          width="25px"
+          style="cursor: pointer"
+          onclick="window.location.href = 'cadastro.html'"
+        />
+      </div>
     </header>
     <nav class="nav-bar">
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li>
-                <a href="#">Produtos</a>
-                <ul class="submenu">
-                    <li>Todos os Produtos</li>
-                    <li>Eletrônicos</li>
-                    <li>Moda</li>
-                    <li>Casa</li>
-                </ul>
-            </li>
-        </ul>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li>
+          <a href="#">Produtos</a>
+          <ul class="submenu">
+            <li>Todos os Produtos</li>
+            <li>Eletrônicos</li>
+            <li>Moda</li>
+            <li>Casa</li>
+          </ul>
+        </li>
+      </ul>
     </nav>
     <div class="container">
-        <div class="login-container">
-            <div class="login-form">
-                <h2>Login</h2>
-                <form onsubmit="return onLoginSubmit(event)">
-                    <label for="loginInput">Login:</label>
-                    <input type="text" id="loginInput" name="login" required>
+      <div class="login-container">
+        <div class="login-form">
+          <h2>Login</h2>
+          <form onsubmit="return onLoginSubmit(event);">
+            <label for="loginInput">Login:</label>
+            <input type="text" id="loginInput" name="login" required />
 
-                    <label for="passwordInput">Senha:</label>
-                    <input type="password" id="passwordInput" name="password" required>
+            <label for="passwordInput">Senha:</label>
+            <input
+              type="password"
+              id="passwordInput"
+              name="password"
+              required
+            />
 
-                    <button type="submit">Autenticar</button>
-                </form>
-            </div>
+            <button type="submit">Autenticar</button>
+          </form>
         </div>
+      </div>
     </div>
     <footer class="footer">
-        <p>Autor: Vinícius Bornhofen</p>
+      <p>Autores: Vinícius Bornhofen, Arthur N. Pereira e Vitor A. Pickler</p>
     </footer>
-</body>
-
+  </body>
 </html>
